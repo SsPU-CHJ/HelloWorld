@@ -15,9 +15,13 @@
 		http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
 		http://www.springframework.org/schema/task
    		http://www.springframework.org/schema/task/spring-task-4.0.xsd">
-	
+
 	<!-- 扫描 @Contr -->
 	<context:component-scan base-package="cn.citasgoo" />
+
+	<mvc:annotation-driven />
+	<mvc:resources mapping="/res/**" location="/res/" />
+
 
 	<!-- 视图解释器 jsp -->
 	<bean id="jspViewResolver"
